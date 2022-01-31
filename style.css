@@ -1,0 +1,643 @@
+@font-face {
+  font-family: "Gilroy Light";
+  src: url("./fonts/Gilroy-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy SemiBold";
+  src: url("./fonts/Gilroy-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.btn {
+  cursor: pointer;
+  background: none;
+  border-radius: 5px;
+  font-family: "Gilroy Light";
+  text-transform: uppercase;
+  font-size: 18px;
+  border: 1px solid #F7941E;
+  min-height: 45px;
+  min-width: 150px;
+  color: #F7941E;
+  width: 200px;
+  height: 60px;
+  transition: all .3s linear;
+}
+
+.btn:hover {
+  color: #FFFFFF;
+  background: #F7941E;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+/*style for header*/
+.header {
+  height: 115px;
+  background: #FAFAFA;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.header-logo {
+  padding-left: 40px;
+}
+
+.header-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.header-nav__item {
+  line-height: 100px;
+  padding: 0 15px;
+}
+
+.header-nav__item a {
+  font-family: "Gilroy Light";
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+
+.header-nav__item a:before {
+  content: '';
+  display: block;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #F7941E;
+  transition: opacity .3s linear;
+}
+
+.header-nav__item a:hover:before {
+  opacity: 1;
+}
+
+.header-button__gift {
+  width: 150px;
+  height: 45px;
+  line-height: 45px;
+  color: #F7941E;
+}
+
+/*style for sections*/
+.section {
+  height: 100%;
+}
+
+.section-column {
+  display: flex;
+  min-height: 600px;
+  height: 100%;
+  background: #F1F1F2;
+}
+
+.section-column__image {
+  order: 1;
+  width: 50%;
+}
+
+.section-column__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section-column__description {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section-column:nth-child(2n) .section-column__image {
+  order: 0;
+}
+
+.gift {
+  padding: 0 12% 0 15%;
+}
+
+.gift-title {
+  font-family: "Gilroy SemiBold";
+  font-size: 56px;
+  line-height: 69px;
+  color: #000000;
+}
+
+.gift-description {
+  font-family: "Gilroy Light";
+  font-size: 20px;
+  line-height: 140.62%;
+  color: #000000;
+  width: 80%;
+  padding: 40px 0;
+}
+
+.gift-button {
+  line-height: 60px;
+  background: #F7941E;
+  color: #FFFFFF;
+  transition: all .3s linear;
+}
+
+.gift-button:hover {
+  background: #F1F1F2;
+  color: #F7941E;
+}
+
+/*style for section How we work*/
+.how-work {
+  padding: 0 15% 0 12%;
+}
+
+.how-work__title {
+  font-family: "Gilroy Light";
+  font-size: 32px;
+  line-height: 140.62%;
+  color: #000000;
+}
+
+.how-work__description {
+  font-family: "Gilroy Light";
+  font-size: 20px;
+  line-height: 140.62%;
+  text-align: justify;
+  color: #000000;
+  padding: 25px 0 35px;
+}
+
+.how-work__button {
+  line-height: 60px;
+  font-size: 18px;
+}
+
+/*style for section Occasions*/
+.section-occasions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7% 10%;
+}
+
+.section-occasions__title {
+  font-family: "Gilroy Light";
+  font-size: 32px;
+  line-height: 38px;
+  color: #000000;
+}
+
+.section-occasions__subtitle {
+  font-family: "Gilroy Light";
+  font-size: 18px;
+  line-height: 135.94%;
+  color: #000000;
+  padding: 25px 0 65px;
+}
+
+.section-occasions__events {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.events__item {
+  height: 100%;
+  min-height: 430px;
+  padding: 0 15px;
+  width: calc(25% - 30px);
+  cursor: pointer;
+}
+
+.events__item-image {
+  height: 270px;
+}
+
+.events__item-image img {
+  max-width: 270px;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.events__item-description {
+  background: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 5px;
+  min-height: 100px;
+}
+
+.events__item-title {
+  font-family: "Gilroy Light";
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+
+}
+
+.events__item-info {
+  font-family: "Gilroy Light";
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+}
+
+/*style for section Contact*/
+.section-contact {
+  height: 240px;
+  background: #F7941E;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 15%;
+}
+
+.contact-ready {
+  font-family: "Gilroy SemiBold";
+  font-size: 32px;
+  line-height: 140.62%;
+  color: #000000;
+}
+
+.contact-signup {
+  font-family: "Gilroy Light";
+  font-size: 32px;
+  line-height: 140.62%;
+  color: #000000;
+}
+
+.contact-find {
+  line-height: 50px;
+  height: 50px;
+  color: #FFFFFF;
+  background: #231F20;
+  margin: 5px;
+  transition: all .3s linear;
+}
+
+.contact-find:hover {
+  background: #FFFFFF;
+  color: #231F20;
+}
+
+.contact-work {
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid #000000;
+  color: #000000;
+  margin: 5px;
+  transition: all .3s linear;
+}
+
+.contact-work:hover {
+  color: #F7941E;
+  background: #231F20;
+}
+
+/*style for section Blog*/
+.section-blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7% 10%;
+}
+
+.section-blog__review {
+  background: #231F20;
+  height: 370px;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  color: #FFFFFF;
+}
+
+.section-blog__review-photo {
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.section-blog__review-photo img {
+  height: 100%;
+}
+
+.section-blog__review-info {
+  padding: 5% 15% 5% 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc(65% - 22%);
+}
+
+.review-author {
+  font-family: "Gilroy Light";
+  font-size: 14px;
+  line-height: 140.62%;
+}
+
+.review-text {
+  font-family: "Gilroy SemiBold";
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.review-more {
+  font-family: "Gilroy Light";
+  font-size: 18px;
+  line-height: 140.62%;
+}
+
+.section-blog__articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 90%;
+}
+
+.article {
+  width: calc(48% - 100px);
+  height: 290px;
+  background: #FFFFFF;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-title {
+  font-family: "Gilroy SemiBold";
+  font-size: 24px;
+  line-height: 140.62%;
+  color: #000000;
+}
+
+.article-text {
+  font-family: "Gilroy Light";
+  font-size: 18px;
+  line-height: 140.62%;
+  color: #000000;
+}
+
+.article-more {
+  font-family: "Gilroy Light";
+  font-size: 14px;
+  line-height: 140.62%;
+  color: #000000;
+}
+
+/*style for footer*/
+.footer {
+  background: #FAFAFA;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 100px 50px 35px;
+}
+
+.footer-nav {
+  width: 100%;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.footer-nav:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0;
+  width: 70%;
+  height: 1px;
+  background: #000000;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.footer-nav__item {
+  padding: 0 40px;
+}
+
+.footer-nav__item a {
+  font-family: "Gilroy SemiBold";
+  font-size: 0.85em;
+  color: #000;
+  text-decoration: none;
+  height: 100%;
+  position: relative;
+}
+
+.footer-nav__item a:before {
+  content: '';
+  display: block;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #F7941E;
+  transition: opacity .3s linear;
+}
+
+.footer-nav__item a:hover:before {
+  opacity: 1;
+}
+
+.footer-nav__item a img {
+  height: 100%;
+}
+
+.footer-media {
+  display: flex;
+  justify-content: center;
+  padding: 55px 0 75px;
+}
+
+.footer-media__item {
+  padding: 0 12px;
+}
+
+.footer-media__item img {
+  transition: all .3s linear;
+  cursor: pointer;
+}
+
+.footer-media__item:hover img {
+  transform: scale(1.1);
+}
+
+/*Media queries*/
+@media (min-width: 992px) and (max-width: 1200px) {
+  .gift-title {
+    font-size: 48px;
+  }
+
+  .section-occasions {
+    padding: 7% 5%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .gift-title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
+  .section-column {
+    min-height: 500px;
+  }
+
+  .section-occasions__events {
+    flex-wrap: wrap;
+  }
+
+  .events__item {
+    padding: 10px 30px;
+    width: calc(50% - 60px);
+  }
+
+  .events__item-imag img {
+    max-width: 100%;
+  }
+
+  .section-contact__buttons {
+    text-align: right;
+  }
+
+  .contact-ready, .contact-signup {
+    font-size: 24px;
+  }
+
+  .review-text {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .header {
+    height: 130px;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+  }
+
+  .header-nav__item {
+    line-height: 24px;
+  }
+
+  .header-button__gift {
+    width: 120px;
+    line-height: normal;
+  }
+
+  .btn {
+    width: auto;
+    height: 100%;
+    min-width: 120px;
+    font-size: 16px;
+  }
+
+  .gift-title, .how-work__title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .gift-description {
+    font-size: 16px;
+  }
+
+  .gift-button, .how-work__button {
+    line-height: 40px;
+  }
+
+  .section-column {
+    min-height: 400px;
+  }
+
+  .how-work__description {
+    font-size: 14px;
+  }
+
+  .section-occasions__events {
+    flex-wrap: wrap;
+  }
+
+  .events__item {
+    padding: 10px 15px;
+    width: calc(50% - 30px);
+    min-height: 330px;
+  }
+
+  .events__item-image {
+    height: 220px;
+  }
+
+  .events__item-description {
+    min-height: 50px;
+    padding: 15px 5px;
+  }
+
+  .section-blog__review {
+    height: 220px;
+  }
+
+  .section-blog__review-photo {
+    width: 50%;
+  }
+
+  .section-blog__review-info {
+    padding: 3% 7% 3% 5%;
+  }
+
+  .review-author {
+    font-size: 16px;
+  }
+
+  .review-more {
+    font-size: 12px;
+  }
+
+  .review-text {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
